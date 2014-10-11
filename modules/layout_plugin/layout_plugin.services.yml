@@ -1,0 +1,7 @@
+services:
+  plugin.manager.layout_plugin:
+    class: Drupal\layout_plugin\Plugin\Layout\LayoutPluginManager
+    arguments: ['@container.namespaces', '@cache.discovery', '@module_handler']
+  plugin.manager.layout_plugin.region:
+    class: Drupal\layout_plugin\Plugin\LayoutRegion\LayoutRegionPluginManager
+    arguments: ['@container.namespaces', '@cache.discovery', '@module_handler']
